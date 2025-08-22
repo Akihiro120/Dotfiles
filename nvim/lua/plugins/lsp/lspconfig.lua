@@ -7,8 +7,8 @@ return {
         vim.lsp.enable(servers)
 
         -- read :h vim.lsp.config for changing options of lsp servers
-        require("lspconfig").lua_ls.setup {}
-        require("lspconfig").clangd.setup {}
-        require("lspconfig").omnisharp.setup {}
+        -- require("lspconfig").lua_ls.setup {}
+        -- require("lspconfig").clangd.setup {}
+        -- require("lspconfig").omnisharp.setup {}
     end,
 }
