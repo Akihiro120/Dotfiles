@@ -1,0 +1,18 @@
+return {
+    "stevearc/conform.nvim",
+    event = {
+        "BufReadPre",
+        "BufNewFile",
+    }, -- uncomment for format on save
+    opts = {
+        formatters_by_ft = {
+            lua = { "stylua" },
+        },
+
+        format_on_save = {
+            -- These options will be passed to conform.format()
+            timeout_ms = 500,
+            lsp_fallback = true,
+        },
+    },
+}
