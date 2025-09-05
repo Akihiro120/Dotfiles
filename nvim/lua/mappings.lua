@@ -18,10 +18,13 @@ map("n", "<leader>wd", function()
     require("nvchad.tabufline").close_buffer()
 end, { desc = "Close buffer", silent = true })
 
-local tabuf = require "nvchad.tabufline"
-
--- for i = 1, 9 do
---     map("n", "<leader>" .. i, function()
---         tabuf.goto_tab(i)
---     end, { desc = "Go to buffer " .. i, silent = true })
--- end
+for i = 1, 9 do
+    vim.keymap.set("n", string.format("<leader>%s", i), function()
+        local bufs = vim.t.bufs
+        if bufs and bufs[i] and vim.api.nvim_buf_is_valid(bufs[i]) then
+            vim.api.nvim_set_current_buf(bufs[i])
+        else
+            vim.notify(string.format("No buffer at slot %d", i), vim.log.levels.WARN)
+        end
+    end, { desc = "Go to buffer " .. i })
+end
