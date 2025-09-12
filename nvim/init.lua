@@ -23,7 +23,7 @@ require("lazy").setup {
     },
 
     {
-        { import = "plugins.effects" },
+        -- { import = "plugins.effects" },
         { import = "plugins.lsp" },
         { import = "plugins.ui" },
     },
