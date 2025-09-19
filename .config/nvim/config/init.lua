@@ -1,5 +1,0 @@
-require("config.lazy")
-require("config.mappings")
-require("config.options")
-require("custom.theme_persist")
-require("config.colorscheme")

@@ -1,5 +1,9 @@
 -- core
 local opts = vim.opt
+local ops = vim.o
+
+-- ops
+ops.winbar = " "
 
 -- Line numbers
 opts.number = true
@@ -16,3 +20,4 @@ opts.smartindent = true
 
 -- Visual
 opts.termguicolors = true
+opts.fillchars = "eob: "

@@ -19,5 +19,13 @@ return {
             lualine_y = { "fileformat", "filetype" },
             lualine_z = { "location" },
         },
+        inactive_sections = {
+            lualine_a = { "mode" },
+            lualine_b = { "filename", "branch", "diff" },
+            lualine_c = { "lsp_status" },
+            lualine_x = { "diagnostics" },
+            lualine_y = { "fileformat", "filetype" },
+            lualine_z = { "location" },
+        },
     },
 }
