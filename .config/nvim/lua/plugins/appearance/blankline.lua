@@ -5,7 +5,7 @@ return {
         require("ibl").setup({
             indent = {
                 char = "┆",
-                highlight = "Comment",
+                highlight = "LineNr",
             },
             scope = {
                 enabled = false,
