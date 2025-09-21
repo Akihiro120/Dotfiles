@@ -10,6 +10,7 @@ return {
                 colorscheme = {
                     enable_preview = true,
                 },
+                find_files = {},
             },
             defaults = {
                 layout_strategy = "horizontal", -- could also be "vertical"
@@ -24,6 +25,9 @@ return {
                 },
             },
         },
+        config = function(_, opts)
+            require("telescope").setup(opts)
+        end,
     },
     {
         "nvim-telescope/telescope-file-browser.nvim",
